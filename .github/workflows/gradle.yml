@@ -1,7 +1,7 @@
 name: orchestrator-pipeline-build-LocalDEV
 on:
   push:
-    branches: [ develop ]
+    branches: [ main ]
 
 jobs:
   #Build Project
