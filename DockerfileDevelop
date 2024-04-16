@@ -1,0 +1,5 @@
+FROM openjdk:21-jdk
+MAINTAINER BePrimeTech <contact@beprimetech.com>
+ADD build/libs/TestGradlePipeline-0.0.1-SNAPSHOT.jar TestGradlePipeline.jar
+ENTRYPOINT ["java", "-XX:+HeapDumpOnOutOfMemoryError", "-XX:HeapDumpPath=/tmp/dumps", "-jar","-Dspring.profiles.active=develop", "/TestGradlePipeline.jar"]
+EXPOSE 9096
